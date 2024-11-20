@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel Club Regristation Form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #1e3c72;
+            padding: 20px;
+        }
+        .container{
+            background-color: white;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        .header{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1{
+            color: #1e3c72;
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .header p{
+            color: #666;
+            font-size: 14px;
+        }
+        .personal-info{
+            background-color: #f8f9fc;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .personal-info h2{
+            color: #1e3c72;
+            font-size: 16px;
+            margin: 0 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .personal-info input{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 8px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            background-color: white;
+            color: #374151;
+            font-size: 14px;
+        }
+        .personal-items{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        label{
+            color: #374151;
+            font-size: 14px;
+        }
+        select{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .adventure-pref{
+            background-color: #f8f9fc;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .adventure-pref h2{
+            color: #1e3c72;
+            font-size: 16px;
+            margin: 0 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        h2{
+            color: #1e3c72;
+            font-size: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        .pref-item{
+            padding: 5px;
+        }
+        .pref-item label{
+            color: #666;
+        }
+        p{
+            color: #666;
+            font-size: 14px;
+        }
+        .duration-item{
+            padding: 5px;
+            color: #666;
+        }
+        .duration-item input{
+            margin-right: 10px;
+        }
+        .para-duration{
+            margin-top: 20px;
+        }
+        .add-info{
+            background-color: #f8f9fc;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input[type="range"]{
+            width: 100%;
+            margin: 10px 0;
+        }
+        input[type="range"]{
+            width: 100%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Adventure Travel Club</h1>
+            <p>Begin your journey with fellow adventurers</p>
+        </div>
+        <form>
+            <div class="personal-info">
+                <h2>Personal Information</h2>
+                <div class="personal-items">
+                    <div class="item1">
+                        <label for="fname">First Name</label>
+                        <br>
+                        <input type="text" id="fname">
+                    </div>
+                    <div class="item2">
+                        <label for="lname">Last Name</label>
+                        <br>
+                        <input type="text" id="lname">
+                    </div>
+                </div>
+                <label for="email">Email Address</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="dob">Date of Birth</label>
+                <br>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <div class="adventure-pref">
+                <h2>Adventure Prefrences</h2>
+                <label for="exp-level">Experience Level</label>
+                <br>
+                <select name="exp-level" id="exp-level" required>
+                    <option value="start">Select your experience level</option>
+                    <option value="rookie">Rookie</option>
+                    <option value="experienced">Experienced</option>
+                    <option value="expert">Expert</option>
+                </select>
+                <div class="pref-activity">
+                    <p>Preferred Activites</p>
+                    <div class="pref-item">
+                        <input type="checkbox" name="checkbox1" id="checkbox1">
+                        <label for="checkbox1">Hiking</label>
+                    </div>
+                    <div class="pref-item">
+                        <input type="checkbox" name="checkbox2" id="checkbox2">
+                        <label for="checkbox2">Rock Climbing</label>
+                    </div>
+                    <div class="pref-item">
+                        <input type="checkbox" name="checkbox3" id="checkbox3">
+                        <label for="checkbox3">Kayaking</label>
+                    </div>
+                    <div class="pref-item">
+                        <input type="checkbox" name="checkbox4" id="checkbox4">
+                        <label for="checkbox4">Scuba Diving</label>
+                    </div>
+                </div>
+                <div class="duration">
+                    <p class="para-duration">Preferred Trip Duration<p>
+                    <div class="duration-item">
+                        <input type="radio" name="duration" id="duration">Weekend Trips (2-3 days)
+                    </div>
+                    <div class="duration-item">
+                        <input type="radio" name="duration" id="duration">Week-long Adventures (5-7 days)
+                    </div>
+                    <div class="duration-item">
+                        <input type="radio" name="duration" id="duration">Extended Expeditions (2+ weeks) 
+                    </div>
+                </div>
+            </div>
+            <div class="add-info">
+                <h2>Additional Information</h2>
+                <label for="fitness-level">Fitness Level (1-10)</label>
+                <div class="range">
+                <input type="range" min="1" max="10" value="5">
+                </div>
+                <label for="about">Tell us about yourself</label>
+                <br>
+                <textarea name="about" id="about" cols="83" rows="5" placeholder="Share your adventure experiences and what excites you about joining our club..."></textarea>
+                <br>
+                <label for="photo">Profile Photo</label>
+                <br>
+                <input type="file" accept="image/*" id="img">
+            </div>
+            <div class="terms-submit">
+                <input type="checkbox" required name="terms" id="terms">
+                <label for="terms">I agree to the Terms and Conditions and Privacy Policy</label>
+                <br>
+                <input type="submit" value="Submit Regristation">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
